@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y configuración general */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3c3e40 0%, #3f4344 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container principal - tarjeta blanca */
+.contact-container {
+    background: rgb(241, 236, 236);
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(243, 241, 241, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Título principal "Contacto" */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 40px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Secciones de contacto */
+.contact-section {
+    margin-bottom: 35px;
+}
+
+.contact-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Títulos de cada sección (h2) */
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Información de contacto (h3) */
+h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 5px;
+    letter-spacing: normal;
+    line-height: 1.4;
+}
+
+/* Remover todos los efectos especiales */
+h2::after {
+    display: none;
+}
+
+.contact-section::before {
+    display: none;
+}
+
+.contact-section:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+h3:hover {
+    color: #666666;
+}
+
+.contact-info {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-top: 0;
+    border-left: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 40px 30px;
+        margin: 0 15px;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
+
+    .contact-section {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 30px 25px;
+        margin: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-section {
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 0.95rem;
+    }
+}

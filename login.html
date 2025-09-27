@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">LOGIN</h1>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            
+            <div class="password-container">
+                <div class="password-field">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+                </div>
+                
+                <button type="button" onclick="handleLogin()">INGRESAR</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleLogin() {
+            const usuario = document.getElementById('usuario').value.trim();
+            const contraseña = document.getElementById('contraseña').value.trim();
+
+            if (!usuario || !contraseña) {
+                alert('⚠️ Por favor completa todos los campos antes de ingresar.');
+                return;
+            }
+
+            // Aquí puedes agregar lógica de autenticación o redirección
+            alert('✅ Datos ingresados correctamente.\nUsuario: ' + usuario);
+            // window.location.href = "ingresar.html"; // Descomenta si quieres redirigir
+        }
+    </script>
+</body>
+</html>

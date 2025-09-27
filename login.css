@@ -1,0 +1,167 @@
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.login-container {
+    background: linear-gradient(135deg, #666666 0%, #333333 50%, #000000 100%);
+    padding: 80px 60px;
+    border-radius: 25px;
+    width: 90vw;
+    max-width: 800px;
+    min-height: 70vh;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título LOGIN */
+.login-title {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 300;
+    letter-spacing: 12px;
+    margin-bottom: 80px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Campo Usuario */
+.form-group {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.form-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    padding: 20px 0;
+    font-size: 1.4rem;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-bottom-color: #fff;
+    border-bottom-width: 3px;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Container para contraseña e ingresar */
+.password-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.password-field {
+    flex: 1;
+}
+
+.password-field label {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.password-field input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    padding: 20px 0;
+    font-size: 1.4rem;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.password-field input:focus {
+    border-bottom-color: #fff;
+    border-bottom-width: 3px;
+}
+
+/* Botón Ingresar */
+.login-button {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: 2px solid #888;
+    padding: 18px 35px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-weight: 400;
+    min-width: 140px;
+}
+
+.login-button:hover {
+    background: rgba(113, 12, 12, 0.1);
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 40px 30px;
+        width: 95%;
+    }
+    
+    .login-title {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+    }
+    
+    .password-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .login-button {
+        width: 100%;
+        padding: 18px;
+    }
+}

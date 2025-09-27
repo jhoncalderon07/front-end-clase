@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones S.A.S</title>
+    <link rel="stylesheet" href="servicios.css">
+</head>
+<body>
+    <h1>SERVICIOS </h1>
+    <ul>
+        <li>
+            <a href="#" 
+               data-service="CONSULTORIA" 
+               data-page="consultoria.html"
+               onmouseover="showServiceName(this, 'CONSULTORIA')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('consultoria.html', 'CONSULTORIA')"
+               target="_blank" 
+               aria-label="CONSULTORIA">
+                <img src="consultoria.png" alt="CONSULTORIA">
+            </a>
+        </li>
+
+        <li>
+            <a href="#" 
+               data-service="DESARROLLO WEB" 
+               data-page="desarrollo-web.html"
+               onmouseover="showServiceName(this, 'DESARROLLO WEB')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('desarrollo-web.html', 'DESARROLLO WEB')"
+               target="_blank" 
+               aria-label="DESARROLLO WEB">
+                <img src="desarrolloweb.png" alt="DESARROLLO WEB">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="MARKETING DIGITAL" 
+               data-page="marketing-digital.html"
+               onmouseover="showServiceName(this, 'MARKETING DIGITAL')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('marketing-digital.html', 'MARKETING DIGITAL')"
+               target="_blank" 
+               aria-label="MARKETING DIGITAL">
+                <img src="marketing digital.png" alt="MARKETING DIGITAL">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="CAPACITACIONES" 
+               data-page="capacitaciones.html"
+               onmouseover="showServiceName(this, 'CAPACITACIONES')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('capacitaciones.html', 'CAPACITACIONES')"
+               target="_blank" 
+               aria-label="CAPACITACIONES">
+                <img src="capacitaciones.png" alt="CAPACITACIONES">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="SOPORTE TÉCNICO" 
+               data-page="soporte-tecnico.html"
+               onmouseover="showServiceName(this, 'SOPORTE TÉCNICO')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('soporte-tecnico.html', 'SOPORTE TÉCNICO')"
+               target="_blank" 
+               aria-label="SOPORTE_TECNICO">
+                <img src="soporte_tecnico.png" alt="SOPORTE TECNICO">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="GESTIÓN FINANCIERA" 
+               data-page="gestion-financiera.html"
+               onmouseover="showServiceName(this, 'GESTIÓN FINANCIERA')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('gestion-financiera.html', 'GESTIÓN FINANCIERA')"
+               target="_blank" 
+               aria-label="GESTION_FINANCIERA">
+                <img src="gestion_financiera.png" alt="GESTION_FINANCIERA">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="DISEÑO GRÁFICO" 
+               data-page="diseño-grafico.html"
+               onmouseover="showServiceName(this, 'DISEÑO GRÁFICO')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('diseño-grafico.html', 'DISEÑO GRÁFICO')"
+               target="_blank" 
+               aria-label="DISEÑO_GRAFICO">
+                <img src="dieño_grafico.png" alt="DISEÑO_GRAFICO">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="SEGURIDAD INFORMÁTICA" 
+               data-page="seguridad-informatica.html"
+               onmouseover="showServiceName(this, 'SEGURIDAD INFORMÁTICA')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('seguridad-informatica.html', 'SEGURIDAD INFORMÁTICA')"
+               target="_blank" 
+               aria-label="SEGURIDAD_INFORMATICA">
+                <img src="seguridad_informatica.png" alt="SEGURIDAD_INFORMATICA">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="ANÁLISIS DE DATOS" 
+               data-page="analisis-datos.html"
+               onmouseover="showServiceName(this, 'ANÁLISIS DE DATOS')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('analisis-datos.html', 'ANÁLISIS DE DATOS')"
+               target="_blank" 
+               aria-label="ANALISIS_DE_DATOS">
+                <img src="analisis_de_datos.png" alt="ANALISIS_DE_DATOS">
+            </a>
+        </li>
+        <li>
+            <a href="#" 
+               data-service="OPTIMIZACIÓN" 
+               data-page="optimizacion.html"
+               onmouseover="showServiceName(this, 'OPTIMIZACIÓN')"
+               onmouseout="hideServiceName()"
+               onclick="redirectToService('optimizacion.html', 'OPTIMIZACIÓN')"
+               target="_blank" 
+               aria-label="OPTIMIZACION">
+                <img src="optiizacion.png" alt="OPTIMIZACION">
+            </a>
+        </li>
+    </ul>
+    <div id="serviceTooltip">Nombre del Servicio</div>
+
+    <script>
+        
+        const services = [
+            { name: 'CONSULTORIA', page: 'consultoria.html' },
+            { name: 'DESARROLLO WEB', page: 'desarrollo-web.html' },
+            { name: 'MARKETING DIGITAL', page: 'marketing-digital.html' },
+            { name: 'CAPACITACIONES', page: 'capacitaciones.html' },
+            { name: 'SOPORTE TÉCNICO', page: 'soporte-tecnico.html' },
+            { name: 'GESTIÓN FINANCIERA', page: 'gestion-financiera.html' },
+            { name: 'DISEÑO GRÁFICO', page: 'diseño-grafico.html' },
+            { name: 'SEGURIDAD INFORMÁTICA', page: 'seguridad-informatica.html' },
+            { name: 'ANÁLISIS DE DATOS', page: 'analisis-datos.html' },
+            { name: 'OPTIMIZACIÓN', page: 'optimizacion.html' }
+        ];
+
+        function showServiceName(element, serviceName) {
+            const tooltip = document.getElementById('serviceTooltip');
+            tooltip.innerHTML = serviceName;
+            tooltip.style.display = 'block';
+            tooltip.style.position = 'fixed';
+            tooltip.style.backgroundColor = '#333';
+            tooltip.style.color = 'white';
+            tooltip.style.padding = '8px 12px';
+            tooltip.style.borderRadius = '4px';
+            tooltip.style.fontSize = '14px';
+            tooltip.style.zIndex = '1000';
+            tooltip.style.pointerEvents = 'none';
+            
+            
+            document.addEventListener('mousemove', updateTooltipPosition);
+            
+            console.log(`Mostrando servicio: ${serviceName}`);
+        }
+
+        
+        function hideServiceName() {
+            const tooltip = document.getElementById('serviceTooltip');
+            tooltip.style.display = 'none';
+            document.removeEventListener('mousemove', updateTooltipPosition);
+        }
+
+       
+        function updateTooltipPosition(event) {
+            const tooltip = document.getElementById('serviceTooltip');
+            tooltip.style.left = (event.clientX + 10) + 'px';
+            tooltip.style.top = (event.clientY - 30) + 'px';
+        }
+
+        
+        function redirectToService(pageUrl, serviceName) {
+            event.preventDefault(); 
+            
+            
+            const confirmMessage = `¿Desea ver más información sobre ${serviceName}?`;
+            
+            if (confirm(confirmMessage)) {
+                console.log(`Redirigiendo a: ${pageUrl}`);
+                console.log(`Servicio seleccionado: ${serviceName}`);
+                
+                
+                window.open(pageUrl, '_blank');
+            } else {
+                console.log(`Navegación cancelada para: ${serviceName}`);
+            }
+            
+            return false; 
+        }
+
+        
+        function getServiceByName(serviceName) {
+            return services.find(service => service.name === serviceName);
+        }
+
+        
+        function directRedirect(pageUrl, serviceName) {
+            console.log(`Navegación directa a: ${serviceName}`);
+            window.location.href = pageUrl;
+        }
+
+        
+        function handleNavigationError(serviceName) {
+            alert(`Lo sentimos, la página de ${serviceName} aún no está disponible.`);
+            console.error(`Error: Página no encontrada para ${serviceName}`);
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Página de servicios cargada correctamente');
+            console.log(`Total de servicios disponibles: ${services.length}`);
+            
+            
+            console.log('Servicios disponibles:');
+            services.forEach((service, index) => {
+                console.log(`${index + 1}. ${service.name} -> ${service.page}`);
+            });
+
+            
+            const serviceLinks = document.querySelectorAll('a[data-service]');
+            serviceLinks.forEach(link => {
+                
+                link.addEventListener('mouseenter', function() {
+                    this.style.opacity = '0.8';
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'all 0.3s ease';
+                });
+
+                link.addEventListener('mouseleave', function() {
+                    this.style.opacity = '1';
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+
+        
+        function searchService(searchTerm) {
+            const results = services.filter(service => 
+                service.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            console.log(`Resultados de búsqueda para "${searchTerm}":`, results);
+            return results;
+        }
+
+       
+        document.addEventListener('keydown', function(event) {
+            
+            if (event.key === 'Escape') {
+                hideServiceName();
+            }
+        });
+    </script>
+</body>
+</html>

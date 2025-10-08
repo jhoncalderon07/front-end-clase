@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="administrador.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1 class="admin-title">Panel de Administrador</h1>
+        <p class="admin-welcome">Bienvenido al panel de administración. Aquí puedes gestionar los precios de los servicios.</p>
+        
+        <!-- Tabla de servicios -->
+        <div class="services-table">
+            <h2>Gestión de Precios de Servicios</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Precio Actual (COP)</th>
+                        <th>Nuevo Precio (COP)</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Servicio 1: Consultoría -->
+                    <tr>
+                        <td>
+                            <strong>Consultoría</strong>
+                        </td>
+                        <td>
+                            <span id="precio-consultoria" class="current-price">4,200,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-consultoria" 
+                                   class="price-input" 
+                                   placeholder="4200000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('consultoria', 'Consultoría')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 2: Desarrollo Web -->
+                    <tr>
+                        <td>
+                            <strong>Desarrollo Web</strong>
+                        </td>
+                        <td>
+                            <span id="precio-desarrollo-web" class="current-price">4,500,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-desarrollo-web" 
+                                   class="price-input" 
+                                   placeholder="4500000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('desarrollo-web', 'Desarrollo Web')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 3: Marketing Digital -->
+                    <tr>
+                        <td>
+                            <strong>Marketing Digital</strong>
+                        </td>
+                        <td>
+                            <span id="precio-marketing-digital" class="current-price">2,800,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-marketing-digital" 
+                                   class="price-input" 
+                                   placeholder="2800000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('marketing-digital', 'Marketing Digital')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 4: Capacitaciones -->
+                    <tr>
+                        <td>
+                            <strong>Capacitaciones</strong>
+                        </td>
+                        <td>
+                            <span id="precio-capacitaciones" class="current-price">1,800,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-capacitaciones" 
+                                   class="price-input" 
+                                   placeholder="1800000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('capacitaciones', 'Capacitaciones')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 5: Análisis de Datos -->
+                    <tr>
+                        <td>
+                            <strong>Análisis de Datos</strong>
+                        </td>
+                        <td>
+                            <span id="precio-analisis-datos" class="current-price">3,500,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-analisis-datos" 
+                                   class="price-input" 
+                                   placeholder="3500000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('analisis-datos', 'Análisis de Datos')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 6: Seguridad Informática -->
+                    <tr>
+                        <td>
+                            <strong>Seguridad Informática</strong>
+                        </td>
+                        <td>
+                            <span id="precio-seguridad-informatica" class="current-price">2,500,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-seguridad-informatica" 
+                                   class="price-input" 
+                                   placeholder="2500000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('seguridad-informatica', 'Seguridad Informática')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 7: Gestión Financiera -->
+                    <tr>
+                        <td>
+                            <strong>Gestión Financiera</strong>
+                        </td>
+                        <td>
+                            <span id="precio-gestion-financiera" class="current-price">3,200,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-gestion-financiera" 
+                                   class="price-input" 
+                                   placeholder="3200000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('gestion-financiera', 'Gestión Financiera')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 8: Diseño Gráfico -->
+                    <tr>
+                        <td>
+                            <strong>Diseño Gráfico</strong>
+                        </td>
+                        <td>
+                            <span id="precio-diseno-grafico" class="current-price">2,200,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-diseno-grafico" 
+                                   class="price-input" 
+                                   placeholder="2200000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('diseno-grafico', 'Diseño Gráfico')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 9: Soporte Técnico -->
+                    <tr>
+                        <td>
+                            <strong>Soporte Técnico</strong>
+                        </td>
+                        <td>
+                            <span id="precio-soporte-tecnico" class="current-price">2,500,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-soporte-tecnico" 
+                                   class="price-input" 
+                                   placeholder="2500000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('soporte-tecnico', 'Soporte Técnico')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Servicio 10: Optimización -->
+                    <tr>
+                        <td>
+                            <strong>Optimización</strong>
+                        </td>
+                        <td>
+                            <span id="precio-optimizacion" class="current-price">3,000,000</span>
+                        </td>
+                        <td>
+                            <input type="number" 
+                                   id="input-optimizacion" 
+                                   class="price-input" 
+                                   placeholder="3000000" 
+                                   min="0" 
+                                   step="100000">
+                        </td>
+                        <td>
+                            <button onclick="actualizarPrecio('optimizacion', 'Optimización')" 
+                                    class="btn-update">
+                                Actualizar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Botones de acción global -->
+        <div class="admin-actions">
+            <button onclick="guardarTodosCambios()" class="btn-save-all">
+                Guardar Todos los Cambios
+            </button>
+            <button onclick="resetearPrecios()" class="btn-reset">
+                Resetear Precios
+            </button>
+            <button onclick="window.location.href='index.html'" class="btn-back">
+                Volver al Inicio
+            </button>
+        </div>
+        
+        <!-- Mensajes de estado -->
+        <div id="mensaje-estado" class="mensaje-estado"></div>
+    </div>
+
+    <script>
+        // Función para formatear números con separador de miles
+        function formatearPrecio(numero) {
+            return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        // Función para actualizar el precio de un servicio específico
+        function actualizarPrecio(servicioId, servicioNombre) {
+            const inputElement = document.getElementById(`input-${servicioId}`);
+            const precioElement = document.getElementById(`precio-${servicioId}`);
+            const nuevoPrecio = inputElement.value;
+            
+            // Validar que el campo no esté vacío
+            if (!nuevoPrecio || nuevoPrecio === '') {
+                mostrarMensaje('Por favor ingresa un precio válido', 'error');
+                return;
+            }
+            
+            // Validar que el precio sea mayor a 0
+            if (parseInt(nuevoPrecio) <= 0) {
+                mostrarMensaje('El precio debe ser mayor a 0', 'error');
+                return;
+            }
+            
+            // Actualizar el precio en la interfaz
+            precioElement.textContent = formatearPrecio(nuevoPrecio);
+            
+            // Limpiar el campo de entrada
+            inputElement.value = '';
+            
+            // Mostrar mensaje de éxito
+            mostrarMensaje(`Precio de ${servicioNombre} actualizado a ${formatearPrecio(nuevoPrecio)} COP`, 'success');
+            
+            // Aquí puedes agregar código para guardar en base de datos
+            console.log(`Servicio: ${servicioNombre}, Nuevo Precio: ${nuevoPrecio}`);
+        }
+
+        // Función para guardar todos los cambios
+        function guardarTodosCambios() {
+            mostrarMensaje('Todos los cambios han sido guardados exitosamente', 'success');
+            console.log('Guardando todos los cambios en la base de datos...');
+        }
+
+        // Función para resetear precios a valores por defecto
+        function resetearPrecios() {
+            if (confirm('¿Estás seguro de que deseas resetear todos los precios a sus valores originales?')) {
+                const preciosOriginales = {
+                    'consultoria': '4,200,000',
+                    'desarrollo-web': '4,500,000',
+                    'marketing-digital': '2,800,000',
+                    'capacitaciones': '1,800,000',
+                    'analisis-datos': '3,500,000',
+                    'seguridad-informatica': '2,500,000',
+                    'gestion-financiera': '3,200,000',
+                    'diseno-grafico': '2,200,000',
+                    'soporte-tecnico': '2,500,000',
+                    'optimizacion': '3,000,000'
+                };
+                
+                for (let servicio in preciosOriginales) {
+                    document.getElementById(`precio-${servicio}`).textContent = preciosOriginales[servicio];
+                }
+                
+                mostrarMensaje('Todos los precios han sido reseteados a sus valores originales', 'info');
+            }
+        }
+
+        // Función para mostrar mensajes de estado
+        function mostrarMensaje(texto, tipo) {
+            const mensajeElement = document.getElementById('mensaje-estado');
+            mensajeElement.textContent = texto;
+            mensajeElement.className = `mensaje-estado ${tipo}`;
+            mensajeElement.style.display = 'block';
+            
+            // Ocultar mensaje después de 3 segundos
+            setTimeout(() => {
+                mensajeElement.style.display = 'none';
+            }, 3000);
+        }
+
+        // Permitir actualizar precio con tecla Enter
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('.price-input');
+            inputs.forEach(input => {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        const servicioId = this.id.replace('input-', '');
+                        const row = this.closest('tr');
+                        const servicioNombre = row.querySelector('strong').textContent;
+                        actualizarPrecio(servicioId, servicioNombre);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

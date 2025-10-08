@@ -57,9 +57,9 @@ nav ul li a {
     letter-spacing: 1px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover { /*configuracion de botones de servicio contacto y login al pasar el mouse*/
     background: rgba(255, 255, 255, 0.9);
-    color: #333;
+    color: #333; /* Cambia el color del texto al blanco */
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-color: rgba(255, 255, 255, 0.8);
@@ -72,49 +72,41 @@ nav ul li a:active {
 
 /* Hero Section */
 .hero-section {
-    text-align: center;
-    padding: 80px 20px;
+ width: 100%; /* Asegura que ocupe todo el ancho */
+    margin-bottom: 80px;    /* Espacio inferior */
+    display: flex; /* Usar flexbox para alinear */
+    text-align: center; /* Centrar texto */
 }
-
-.video-container {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center;
+.imagen {
     width: 100%;
-    max-width:1200px;
-    margin: 0 auto;
-    padding: right 20px;;
-
+    text-align: right;  /* Alinear a la izquierda */
+    margin-bottom: 40px; /* Espacio inferior */
+    display: flex; /* Usar flexbox para alinear */
+    justify-content: flex-start; /* Asegura que la imagen esté pegada a la izquierda */
 }
 
-.video-container img {
-    width: 100%;
-    max-width: 500px; 
-    height: 450px;
-    display: block;
+.imagen img {
+    width: 100%;  /* Asegura que la imagen ocupe todo el contenedor */
+    max-width: 700px;  /* tamaño*/
+    height: 400px ; /* tamaño inferior*/
+    border-radius: 10px;/* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra */
+    margin-left: 40px;    /* espacio hacia la izquierda*/
+    margin-top: 20px;    /* espacio hacia arriba*/
 }
 
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+.hero-content h2 { /*titulo principal*/
+    font-size: 3.5rem; /* Tamaño de fuente*/
+    margin-bottom: 15px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
 }
 
-.hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    opacity: 0.9;
+.hero-content p { /*subtitulo*/
+    font-size: 1.2rem;  /* Tamaño de fuente más pequeño */
+    line-height: 1.6;  /* Mejorar legibilidad */
+    margin-bottom: 10px; /* Espacio inferior */
+    max-width: 600px; /* Limitar ancho para mejor lectura */     
+    opacity: 0.9; /* Texto un poco más claro */
 }
 
 .hero-buttons {
@@ -157,22 +149,28 @@ nav ul li a:active {
 
 .hero-buttons a:last-child:hover {
     background: white;
-    color: #333;
+    color: #333; /* Cambia el color del texto al blanco */
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
 /* Services Section */
 .services-section {
-    text-align: center;
-    padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.1);
+    position:relative;
+    text-align: center; /* Centrar texto */
+    padding: 50px 10px; /* Espaciado */
+    background: rgba(0, 0, 0, 0.1); /*color de fondo*/
+    margin-bottom: 80px; /* Espacio inferior */
+    margin-top: 100px; /* Espacio superior */
+    margin-left: 10px; /* Espacio izquierdo */
+    margin-right: 100px; /* Espacio derecho */
+    border-radius: 25px; /* Bordes redondeados */
 }
 
 .services-section h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 3rem;/*titulo principal*/
+    margin: 20px;; /*espacio inferior*/
+    font-weight: bold; /* Negrita */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -192,88 +190,82 @@ footer {
     background: rgba(0, 0, 0, 0.2);
 }
 
-.social-icons {
+/* Contenedor de botones sociales */
+.social-buttons {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: left;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
 }
 
-.social-icons a {
+/* Estilos base para todos los botones */
+.social-buttons a {
     display: inline-block;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de Facebook */
+.social-buttons a.facebook {
+    background: rgba(24, 119, 242, 0.2);
+    color: #ffffff;
+    border-color: rgba(24, 119, 242, 0.5);
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+.social-buttons a.facebook:hover {
+    background: #1877f2;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+    border-color: #1877f2;
+}
+
+/* Botón de Instagram */
+.social-buttons a.instagram {
+    background: rgba(228, 64, 95, 0.2);
+    color: #ffffff;
+    border-color: rgba(228, 64, 95, 0.5);
     backdrop-filter: blur(10px);
 }
 
-.social-icons a:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+.social-buttons a.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(228, 64, 95, 0.4);
+    border-color: #e4405f;
 }
 
-.social-icons a img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1);
+/* Botón de TikTok */
+.social-buttons a.tiktok {
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
 }
 
-.social-icons a:hover img {
-    filter: brightness(0) invert(0);
+.social-buttons a.tiktok:hover {
+    background: #000000;
+    color: #00f2ea;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 242, 234, 0.4);
+    border-color: #00f2ea;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        text-align: center;
-        width: 100%;
-        padding: 15px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .services-section h2 {
-        font-size: 2.2rem;
-    }
-
-    .services-section h3 {
-        font-size: 1.2rem;
-    }
-
-    .social-icons {
-        gap: 20px;
-    }
+/* Efecto al presionar */
+.social-buttons a:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
+
+

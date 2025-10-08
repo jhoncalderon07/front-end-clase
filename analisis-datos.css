@@ -1,0 +1,267 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración del body - Degradado similar a la imagen */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #c9c9c9 0%, #6b6b6b 40%, #2a2a2a 70%, #000000 100%);
+    min-height: 100vh;
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 20px 40px;
+    align-items: start;
+}
+
+/* Imagen - Posición superior izquierda */
+img {
+    grid-column: 1;
+    grid-row: 1 / 7;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    justify-self: start;
+    align-self: center;
+}
+
+/* h2 - Título del servicio */
+h2 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 0;
+    
+}
+
+/* h3 - Precio */
+h3 {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: right;
+    padding-right: 50px;
+}
+
+/* h4 - Texto introductorio */
+h4 {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* lu (lista) - Corregir a ul */
+lu, ul {
+    grid-column: 2;
+    grid-row: 4;
+    list-style: none;
+    padding-left: 0;
+    color: #ffffff;
+}
+
+lu li, ul li {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+lu li::before, ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+/* h5 - Texto de conclusión */
+h5 {
+    grid-column: 2;
+    grid-row: 5;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+/* Botón de acción */
+.service-action {
+    grid-column: 2;
+    grid-row: 6;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.service-action button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.service-action button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+}
+
+.service-action button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        padding: 30px 40px;
+        gap: 20px;
+    }
+
+    img {
+        grid-column: 1;
+        grid-row: 1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    h3 {
+        grid-column: 1;
+        grid-row: 3;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    h4 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    lu, ul {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    h5 {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .service-action {
+        grid-column: 1;
+        grid-row: 7;
+    }
+}
+
+/* Ajustes para pantallas más pequeñas */
+
+@media (max-width: 768px) { 
+    body {
+        padding: 25px 20px;
+        gap: 15px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    lu li, ul li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    h5 {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .service-action button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 15px;
+        gap: 12px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    h4 {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    lu li, ul li {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    h5 {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .service-action button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
